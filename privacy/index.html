@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidad — Práctica Mail Watcher</title>
+<style>
+  :root{
+    --bg:#0a0a0a; --surface:#121212; --border:#262626;
+    --text:#f2f2f2; --muted:#9a9a9a; --accent:#5cc8ff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    line-height:1.65;
+  }
+  main{max-width:640px; margin:0 auto; padding:56px 20px 80px}
+  h1{font-size:24px; margin:0 0 6px}
+  .tag{color:var(--muted); font-size:14px; margin:0 0 32px}
+  h2{font-size:16px; color:var(--accent); margin:32px 0 8px}
+  p, li{font-size:15px}
+  ul{padding-left:20px}
+  li{margin-bottom:6px}
+  code{background:var(--surface); border:1px solid var(--border); border-radius:4px; padding:1px 5px; font-size:13px}
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  footer{margin-top:40px; font-size:13px; color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Política de Privacidad</h1>
+  <p class="tag">Práctica Mail Watcher — herramienta personal</p>
+
+  <p>Práctica Mail Watcher es una herramienta de uso estrictamente personal, operada por un único usuario para monitorear su propia cuenta de Gmail. No es un servicio público, no tiene usuarios externos y no procesa datos de terceros.</p>
+
+  <h2>Qué datos de Google se acceden</h2>
+  <p>Únicamente, de los correos de la propia bandeja del usuario: remitente, asunto, un fragmento corto de vista previa ("snippet") e identificadores internos del mensaje (message ID, thread ID). El cuerpo completo del correo nunca se descarga ni se lee.</p>
+
+  <h2>Finalidad del acceso</h2>
+  <p>Detectar automáticamente correos relacionados con postulaciones a prácticas profesionales y procesos de selección laboral, y clasificarlos (por ejemplo: confirmación de postulación, entrevista, evaluación, avance de proceso, oferta, rechazo) para generar una notificación local al usuario.</p>
+
+  <h2>Alcance del acceso: solo lectura</h2>
+  <p>El acceso usa exclusivamente el scope <code>https://www.googleapis.com/auth/gmail.readonly</code> de la API de Gmail. La aplicación:</p>
+  <ul>
+    <li>Nunca envía correos.</li>
+    <li>Nunca modifica, etiqueta ni mueve correos.</li>
+    <li>Nunca elimina correos.</li>
+    <li>Nunca responde en nombre del usuario.</li>
+  </ul>
+
+  <h2>Qué datos se almacenan, y dónde</h2>
+  <p>Toda la información se almacena únicamente de forma local, en el propio computador del usuario, en una base de datos SQLite local. Se guarda: el ID del mensaje y del hilo (para evitar notificaciones duplicadas), remitente, asunto, categoría y prioridad asignadas, y si se notificó o no. El cuerpo completo del correo nunca se almacena. Nada de esto se sube a ningún servidor, nube o servicio externo.</p>
+
+  <h2>Credenciales y tokens</h2>
+  <p>El token de acceso OAuth se guarda únicamente en el disco local del usuario y nunca se comparte, transmite ni sube a ningún repositorio o servicio de terceros.</p>
+
+  <h2>Venta o compartición de datos</h2>
+  <p>Los datos no se venden, no se comparten con terceros y no se usan con fines publicitarios ni de analítica.</p>
+
+  <h2>Cómo revocar el acceso</h2>
+  <p>El usuario puede revocar el acceso en cualquier momento desde <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>, eliminando el acceso otorgado a esta aplicación. Esto invalida el acceso de inmediato.</p>
+
+  <h2>Uso estrictamente personal</h2>
+  <p>Esta aplicación fue creada por y para un único usuario, para monitorear su propia cuenta de Gmail. No está diseñada ni ofrecida como servicio para terceros.</p>
+
+  <h2>Contacto</h2>
+  <p>Para cualquier consulta sobre esta herramienta o esta política, contactar al propietario de la cuenta de Gmail monitoreada.</p>
+
+  <footer>
+    Última actualización: octubre de 2026. &middot; <a href="/">Volver al inicio</a>
+  </footer>
+</main>
+</body>
+</html>

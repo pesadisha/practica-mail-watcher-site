@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Práctica Mail Watcher</title>
+<style>
+  :root{
+    --bg:#0a0a0a; --surface:#121212; --border:#262626;
+    --text:#f2f2f2; --muted:#9a9a9a; --accent:#5cc8ff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  main{max-width:640px; margin:0 auto; padding:56px 20px 80px}
+  h1{font-size:28px; margin:0 0 6px}
+  .tag{color:var(--muted); font-size:14px; margin:0 0 36px}
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:24px; margin-bottom:16px}
+  .card h2{font-size:15px; margin:0 0 8px; color:var(--accent)}
+  .card p{margin:0; color:var(--text); font-size:15px}
+  ul{margin:0; padding-left:20px}
+  li{margin-bottom:8px; font-size:15px}
+  footer{margin-top:40px; font-size:13px; color:var(--muted)}
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<main>
+  <h1>Práctica Mail Watcher</h1>
+  <p class="tag">Herramienta personal de monitoreo de Gmail</p>
+
+  <div class="card">
+    <h2>Qué es</h2>
+    <p>Es una herramienta de uso estrictamente personal. Monitorea la bandeja de Gmail de un único usuario para detectar correos relacionados con postulaciones a prácticas profesionales y procesos de selección laboral (confirmaciones, entrevistas, evaluaciones, avances de proceso, ofertas, rechazos), y genera una notificación local cuando llega uno relevante.</p>
+  </div>
+
+  <div class="card">
+    <h2>Acceso a Gmail</h2>
+    <ul>
+      <li>Acceso de <strong>solo lectura</strong> (scope <code>gmail.readonly</code>).</li>
+      <li>Nunca envía, modifica, etiqueta ni elimina correos.</li>
+      <li>Nunca responde en nombre del usuario.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Notificaciones</h2>
+    <p>Las notificaciones se generan de forma local en el computador del usuario. No se envían a ningún servidor externo ni a terceros.</p>
+  </div>
+
+  <div class="card">
+    <h2>Datos</h2>
+    <p>No vende ni comparte información con terceros. Ver el detalle completo en la <a href="/privacy/">Política de Privacidad</a>.</p>
+  </div>
+
+  <footer>
+    <a href="/privacy/">Política de Privacidad</a>
+  </footer>
+</main>
+</body>
+</html>
